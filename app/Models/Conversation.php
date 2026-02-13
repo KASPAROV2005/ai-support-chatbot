@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Conversation extends Model
 {
-    // ✅ نخليها مفتوحة باش update يخدم
+    
     protected $guarded = [];
 
     public function messages()

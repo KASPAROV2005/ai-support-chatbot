@@ -39,7 +39,7 @@ class ChatController extends Controller
             'content'         => $message,
         ]);
 
-        // ✅ If waiting for ticket confirmation
+        //  If waiting for ticket confirmation
         if (($conversation->ticket_offer_pending ?? false) === true) {
 
             if ($this->isYes($message)) {
@@ -108,7 +108,7 @@ class ChatController extends Controller
             ]);
         }
 
-        // ✅ AI reply (OpenRouter) بدل mockAI
+        //  AI reply (OpenRouter) بدل mockAI
         $reply = $this->openRouterAIReply($message, $conversation);
 
         // Offer ticket if it looks like a real issue
@@ -134,7 +134,7 @@ class ChatController extends Controller
         ]);
     }
 
-    // ✅ Poll new messages for the visitor
+    //  Poll new messages for the visitor
     public function poll(Request $request)
     {
         $request->validate([
@@ -168,7 +168,7 @@ class ChatController extends Controller
     }
 
     /**
-     * ✅ OpenRouter AI Reply (with history)
+     *  OpenRouter AI Reply (with history)
      */
     private function openRouterAIReply(string $userMessage, Conversation $conversation): string
     {

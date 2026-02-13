@@ -21,7 +21,7 @@ class TicketController extends Controller
             });
         }
 
-        // 🎯 Filter by status
+        //  Filter by status
         if ($request->status) {
             $query->where('status', $request->status);
         }
