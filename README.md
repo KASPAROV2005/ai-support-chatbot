@@ -1,3 +1,284 @@
+<div align="center">
+
+# 🤖 AI Support Chatbot Platform
+
+### Enterprise-Ready Multi-Site AI Chat + Ticket System
+
+[![Laravel](https://img.shields.io/badge/Laravel-11-red?style=for-the-badge&logo=laravel)]()
+[![MySQL](https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql)]()
+[![WebSockets](https://img.shields.io/badge/Realtime-WebSockets-green?style=for-the-badge)]()
+[![AI](https://img.shields.io/badge/AI-Integrated-purple?style=for-the-badge)]()
+
+---
+
+</div>
+
+---
+
+# 📌 Project Overview
+
+AI Support Chatbot Platform is a modern SaaS-ready system that provides:
+
+- 🤖 AI-powered chat responses
+- 💬 Real-time messaging
+- 🎫 Smart Chat → Ticket conversion
+- 👨‍💼 Admin dashboard for support agents
+- 🌍 Multi-site integration via widget
+- 🔐 Role-based access control
+
+This project is designed to simulate a real-world production-ready customer support platform.
+
+---
+
+# 🧠 System Architecture
+
+
+Visitor
+↓
+Widget (JavaScript)
+↓
+Laravel API
+↓
+AI Engine
+↓
+Conversation Storage (MySQL)
+↓
+Ticket System (if needed)
+↓
+Admin Panel (Support Agents)
+
+
+---
+
+# 🔥 Core Features
+
+## 1️⃣ AI Chat Engine
+
+- AI responses integrated
+- Context-aware conversation
+- Multi-message memory support
+- Scalable model integration (OpenRouter compatible)
+
+---
+
+## 2️⃣ Smart Ticket System
+
+Chat automatically detects issues:
+
+
+"J’ai un problème de connexion"
+
+
+Bot replies:
+
+
+Voulez-vous créer un ticket ? (oui/non)
+
+
+If confirmed:
+
+✔ Ticket is created  
+✔ Linked to conversation  
+✔ Visible in Admin Panel  
+
+---
+
+## 3️⃣ Real-Time Messaging
+
+- WebSocket powered
+- Instant message delivery
+- Support replies appear immediately
+- No refresh required
+
+---
+
+## 4️⃣ Admin Panel
+
+Admin can:
+
+- View tickets
+- Filter by status
+- Reply to conversations
+- Change ticket status
+- Manage sites
+- Monitor activity
+
+---
+
+## 5️⃣ Multi-Site Widget Integration
+
+External websites integrate chat using:
+
+```html
+<script
+  src="http://localhost/widget.js"
+  data-site-key="SITE_KEY"
+></script>
+
+Each site has:
+
+Unique site_key
+
+Separate conversations
+
+Separate tickets
+
+🛠 Tech Stack
+Layer	Technology
+Backend	Laravel 11
+Database	MySQL
+Frontend	Blade + Tailwind
+Realtime	WebSockets (Reverb)
+AI	OpenRouter API
+Auth	Laravel Auth
+Queue	Database Queue
+📂 Project Structure
+app/
+ ├── Http/
+ │    ├── Controllers/
+ │    ├── Middleware/
+ │
+ ├── Models/
+ │
+ ├── Events/
+
+routes/
+ ├── web.php
+ ├── api.php
+
+resources/views/
+ ├── admin/
+ ├── dashboard.blade.php
+
+public/
+ ├── widget.js
+🔐 Security Features
+
+CSRF protection
+
+Admin middleware
+
+Role-based authorization
+
+Site key validation
+
+Environment-based secret management
+
+📊 Database Models
+Users
+
+name
+
+email
+
+is_admin
+
+Sites
+
+site_key
+
+is_active
+
+Conversations
+
+site_id
+
+visitor_id
+
+ticket_offer_pending
+
+ticket_draft_subject
+
+ticket_draft_description
+
+Messages
+
+conversation_id
+
+role (user | bot | support)
+
+content
+
+Tickets
+
+site_id
+
+conversation_id
+
+visitor_id
+
+subject
+
+description
+
+status
+
+priority
+
+🚀 Installation Guide
+git clone https://github.com/KASPAROV2005/ai-support-chatbot.git
+cd ai-support-chatbot
+
+composer install
+cp .env.example .env
+php artisan key:generate
+
+php artisan migrate
+
+php artisan serve
+🔑 Environment Configuration
+
+Add AI key in .env:
+
+OPENROUTER_API_KEY=your_key_here
+🧪 Development Roadmap
+
+ AI Integration
+
+ Ticket System
+
+ Admin Panel
+
+ Real-time Messaging
+
+ Advanced AI memory
+
+ SaaS Monetization
+
+ Analytics Dashboard
+
+ Docker Deployment
+
+🎯 Academic Context
+
+This project demonstrates:
+
+Advanced Laravel architecture
+
+Real-time systems
+
+AI API integration
+
+Event-driven design
+
+SaaS-oriented thinking
+
+Suitable for:
+
+✔ Final Year Project (PFE)
+✔ SaaS Prototype
+✔ Production Simulation
+
+👨‍💻 Author
+
+Walid Islah
+Computer Science Student
+Software Engineering
+
+<div align="center">
+🚀 Built with passion & modern engineering principles
+</div> ```
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
