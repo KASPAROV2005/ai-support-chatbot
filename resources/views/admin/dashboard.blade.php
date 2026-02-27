@@ -1,10 +1,22 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <div>
-                <h2 class="text-xl font-extrabold text-slate-900">Admin Dashboard</h2>
-                <p class="text-sm text-slate-600">Tickets • Conversations • Support</p>
-            </div>
+            <div class="border-b border-slate-200 pb-5">
+    <h2 class="text-xl font-bold text-slate-900 mb-3">
+        Admin Dashboard
+    </h2>
+    <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-md bg-white border border-slate-200 text-xs font-semibold text-slate-600 shadow-sm hover:bg-slate-50 cursor-pointer transition-all">
+            Tickets
+        </span>
+        <span class="px-3 py-1 rounded-md bg-white border border-slate-200 text-xs font-semibold text-slate-600 shadow-sm hover:bg-slate-50 cursor-pointer transition-all">
+            Conversations
+        </span>
+        <span class="px-3 py-1 rounded-md bg-indigo-50 border border-indigo-200 text-xs font-bold text-indigo-700 shadow-sm cursor-pointer">
+            Support
+        </span>
+    </div>
+</div>
 
             <div class="flex gap-2">
                 <a href="{{ route('admin.tickets.index') }}"
